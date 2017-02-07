@@ -6,7 +6,7 @@
 
 CHIP_NAND_SCRIPTS_VERSION = master
 CHIP_NAND_SCRIPTS_REPO_NAME = CHIP-nand-scripts
-CHIP_NAND_SCRIPTS_SITE = https://gitlab.com/kaplan2539/$(CHIP_NAND_SCRIPTS_REPO_NAME)
+CHIP_NAND_SCRIPTS_SITE = https://github.com/t-mon/chip-nand-scripts.git
 CHIP_NAND_SCRIPTS_SITE_METHOD = git
 CHIP_NAND_SCRIPTS_DEPENDENCIES = mtd uboot-tools android-tools
 
@@ -27,6 +27,7 @@ define HOST_CHIP_NAND_SCRIPTS_INSTALL_CMDS
 	$(INSTALL) -D -m 0644 $(HOST_CHIP_NAND_SCRIPTS_DIR)/nand_configs/Hynix-MLC.config $(HOST_DIR)/usr/bin/nand_configs/Hynix-MLC.config
 	$(INSTALL) -D -m 0644 $(HOST_CHIP_NAND_SCRIPTS_DIR)/nand_configs/Toshiba-MLC.config $(HOST_DIR)/usr/bin/nand_configs/Toshiba-MLC.config
 	$(INSTALL) -D -m 0644 $(HOST_CHIP_NAND_SCRIPTS_DIR)/nand_configs/Toshiba-SLC-4G-TC58NVG2S0H.config $(HOST_DIR)/usr/bin/nand_configs/Toshiba-SLC-4G-TC58NVG2S0H.config
+	$(INSTALL) -D -m 0644 $(HOST_CHIP_NAND_SCRIPTS_DIR)/nand_configs/Toshiba-SLC-16G-TH58NVG4S0H.config $(HOST_DIR)/usr/bin/nand_configs/Toshiba-SLC-16G-TH58NVG4S0H.config
 endef
 
 $(eval $(host-generic-package))
